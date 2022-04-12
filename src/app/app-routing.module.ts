@@ -5,12 +5,20 @@ import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 const routes: Routes = [
+  { path: '', component: HomeComponent, pathMatch: 'full' },
   {
     path: 'elements',
     loadChildren: () =>
       import('./elements/elements.module').then((m) => m.ElementsModule),
   },
-  { path: '', component: HomeComponent, pathMatch: 'full' },
+  {
+    path: 'collections',
+    loadChildren: () =>
+      import('./collections/collections.module').then(
+        (m) => m.CollectionsModule
+      ),
+  },
+
   { path: '**', component: PagenotfoundComponent },
 ];
 
