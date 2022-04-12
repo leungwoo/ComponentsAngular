@@ -5,6 +5,11 @@ import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 const routes: Routes = [
+  {
+    path: 'elements',
+    loadChildren: () =>
+      import('./elements/elements.module').then((m) => m.ElementsModule),
+  },
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: '**', component: PagenotfoundComponent },
 ];
