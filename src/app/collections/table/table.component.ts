@@ -8,8 +8,8 @@ import { Header } from './header';
   styleUrls: ['./table.component.css'],
 })
 export class TableComponent implements OnInit {
-  @Input() data: Data[] = [];
-  @Input() headers: Header[] = [];
+  @Input() data: any = [];
+  @Input() headers: any = [];
   constructor() {}
 
   ngOnInit(): void {}
