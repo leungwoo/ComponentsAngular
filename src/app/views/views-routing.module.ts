@@ -1,10 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { StatisticsComponent } from './statistics/statistics.component';
+import { ViewsHomeComponent } from './views-home/views-home.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', component: ViewsHomeComponent },
+  { path: 'views-home', component: ViewsHomeComponent },
+  { path: 'statistics', component: StatisticsComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class ViewsRoutingModule { }
+export class ViewsRoutingModule {}
