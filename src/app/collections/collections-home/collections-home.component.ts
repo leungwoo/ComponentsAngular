@@ -8,7 +8,7 @@ import { Header } from '../table/header';
   styleUrls: ['./collections-home.component.css'],
 })
 export class CollectionsHomeComponent implements OnInit {
-  public data: any = [
+  public data: Data[] = [
     {
       name: 'James',
       age: 20,
@@ -28,7 +28,7 @@ export class CollectionsHomeComponent implements OnInit {
       employeed: false,
     },
   ];
-  public headers: any = [
+  public headers: Header[] = [
     { key: 'name', label: 'Name' },
     { key: 'age', label: 'Age' },
     { key: 'job', label: 'Job' },
