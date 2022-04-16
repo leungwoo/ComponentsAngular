@@ -3,7 +3,9 @@
 <app-modal *ngIf="openModal" (close)="onClick()">
   <div modalTitle>This header is Reusable</div>
   <p>This content is Reusable</p>
-  <!-- <ng-container modalFooter>
+  <ng-container modalFooter>
     <button class="ui button" (click)="onClick()">close me</button>
-  </ng-container> -->
+  </ng-container>
 </app-modal>
+<app-divider>Accordion Component</app-divider>
+<app-accordion [items]="items"></app-accordion>
